@@ -1,0 +1,194 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cuerpo de la página */
+body {
+    background: url('https://e0.pxfuel.com/wallpapers/440/408/desktop-wallpaper-simon-c-page-abstract-colorful-pattern-and-mobile-background.jpg') no-repeat center center fixed;
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo del header */
+header {
+    background-color: #1e2a47; /* Fondo oscuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #f4b400;
+}
+
+/* Estilo para el logo */
+.angular-logo {
+    position: fixed;
+    top: 20px;
+    left: 120px;  /* Colocamos el logo a la derecha del botón Home */
+    width: 80px;  /* Tamaño más grande */
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.angular-logo:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Estilo de los títulos principales */
+h1, h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style-type: none;
+    background-color: #f4b400; /* Amarillo Angular */
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #1e2a47;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Estilo principal de las secciones */
+main {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	color: #f4b400; /* Aplicamos el color amarillo al texto */
+}
+
+main p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+main ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilo de la imagen */
+.example-image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #f4b400;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para el botón flotante "Home" */
+.home-button-fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f4b400;
+    color: #1e2a47;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10; /* Asegura que el botón flote por encima de otros elementos */
+}
+
+/* Hover efecto para el botón Home */
+.home-button-fixed:hover {
+    background-color: #1e2a47;
+    color: #f4b400;
+}
+
+/* Icono de Angular */
+.angular-logo {
+    position: fixed;
+    top: 20px;
+    left: 120px;  /* Colocamos el logo a la derecha del botón Home */
+    width: 80px;  /* Tamaño más grande */
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.angular-logo:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Fondo de la página de inicio */
+.index-bg {
+    background: url('https://e0.pxfuel.com/wallpapers/152/677/desktop-wallpaper-abstract-geometric-royalty-negative-space.jpg') no-repeat center center/cover;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.index-bg h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* Efecto de hover en botones y enlaces */
+a:hover, .home-button-fixed:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la navegación activa */
+nav ul li a.active {
+    color: #f4b400;
+}
+
+/* Normalizar y centrar todas las imágenes */
+img {
+    display: block;               /* Hace que la imagen sea un bloque (necesario para centrarla) */
+    margin: 0 auto;               /* Centra la imagen horizontalmente */
+    max-width: 100%;              /* Hace que la imagen no se salga del contenedor */
+    height: auto;                 /* Mantiene la proporción original de la imagen */
+    border-radius: 5px;           /* Redondea las esquinas de las imágenes */
+}
