@@ -28,13 +28,48 @@
     </nav>
 
     <main>
-        <h2>Tu primer componente en Angular</h2>
-        <p>Para crear tu primer componente en Angular, sigue estos pasos:</p>
-        <ul>
-            <li>1. Usa el comando <code>ng generate component nombre-componente</code></li>
-            <li>2. Agrega la lógica y el HTML de tu componente.</li>
-        </ul>
-        <img src="angular-example.png" alt="Componente Angular" class="example-image">
+        <h2>Primera Aproximación en Angular: "Hola Mundo"</h2>
+
+		<p>Para realizar una primera aproximación en Angular con el clásico ejemplo de "Hola Mundo", sigue estos pasos:</p>
+
+		<br><p><strong>1. Crear un Proyecto Angular</strong></p>
+		<p>Primero, asegúrate de tener <strong>Angular CLI</strong> instalado y crea un nuevo proyecto con el siguiente comando:</p>
+		<pre><code>ng new hola-mundo</code></pre>
+		<p>Este comando creará un nuevo proyecto llamado <strong>hola-mundo</strong> y te pedirá que elijas algunas configuraciones, como si deseas incluir Angular Routing y qué estilo deseas usar (CSS, SCSS, etc.).</p></br>
+
+		<br><p><strong>2. Navegar al Directorio del Proyecto</strong></p>
+		<p>Una vez creado el proyecto, navega al directorio del proyecto recién creado:</p>
+		<pre><code>cd hola-mundo</code></pre></br>
+
+		<br><p><strong>3. Crear un Componente "Hola Mundo"</strong></p>
+		<p>Angular crea un componente principal de manera predeterminada llamado <strong>AppComponent</strong>. Para personalizarlo y mostrar "Hola Mundo", sigue estos pasos:</p>
+			<p><li>Abre el archivo <code>src/app/app.component.ts</code>.</li></p>
+			<p><li>Dentro de este archivo, modifica la propiedad <code>title</code> de la siguiente forma:</li></p>
+				<pre><code>
+	import { Component } from '@angular/core';
+
+	@Component({
+	  selector: 'app-root',
+	  templateUrl: './app.component.html',
+	  styleUrls: ['./app.component.css']
+	})
+	export class AppComponent {
+	  title = 'Hola Mundo';
+	}
+		</code></pre></br>
+
+		<br><p><strong>4. Modificar la Vista del Componente</strong></p>
+		<p>Abre el archivo <code>src/app/app.component.html</code> y reemplaza su contenido con lo siguiente:</p>
+		<pre><code>&lt;h1&gt;{{ title }}&lt;/h1&gt;</code></pre>
+		<p>La doble llave <code>{{ title }}</code> es la <strong>vinculación de datos</strong> en Angular, lo que significa que el valor de la propiedad <code>title</code> se mostrará dentro del elemento <code>&lt;h1&gt;</code>.</p></br>
+
+		<br><p><strong>5. Ejecutar la Aplicación</strong></p>
+		<p>Para ver el resultado, regresa a la terminal y ejecuta el siguiente comando:</p>
+		<pre><code>ng serve</code></pre>
+		<p>Este comando iniciará el servidor de desarrollo y podrás ver la aplicación en tu navegador accediendo a:
+		<a href="http://localhost:4200" target="_blank">http://localhost:4200</a></p>
+
+		<br><p>Verás la frase <strong>"Hola Mundo"</strong> en pantalla.</p></br></br>
     </main>
 
     <footer>
