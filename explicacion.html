@@ -28,8 +28,54 @@
     </nav>
 
     <main>
-        <h2>El concepto de componentes y módulos</h2>
-        <p>En Angular, las aplicaciones están formadas por componentes y módulos. Un componente es una pieza de código que representa una vista y la lógica asociada a ella.</p>
+        <h2>Funcionamiento de Angular</h2>
+
+		<p>Angular es un framework basado en componentes que organiza la aplicación en unidades modulares y reutilizables. A continuación, se describe cómo funciona Angular y cómo actúa sobre las diferentes partes de la aplicación:</p>
+
+		<br><p><strong>1. Angular actúa sobre componentes, no sobre páginas</strong></p>
+		<p>Angular organiza la aplicación en <strong>componentes</strong>. Cada componente tiene tres partes principales:</p>
+		<ul>
+			<li><strong>HTML</strong>: La plantilla que define la estructura de la interfaz de usuario.</li>
+			<li><strong>TypeScript</strong>: Contiene la lógica y los métodos asociados al componente.</li>
+			<li><strong>CSS/SCSS</strong>: Los estilos que se aplican solo a ese componente.</li>
+		</ul>
+		<p>Esto permite dividir la aplicación en partes más pequeñas y reutilizables, facilitando el mantenimiento y la escalabilidad.</p>
+
+		<br><p><strong>2. Modificación de ficheros</strong></p>
+		<p>En Angular, los ficheros que se modifican son principalmente los siguientes:</p>
+		<ul>
+			<li><strong>HTML</strong>: Aquí se define la estructura y el contenido visible de la interfaz de usuario.</li>
+			<li><strong>TypeScript</strong>: El archivo de lógica donde se manejan las interacciones, los eventos y los datos.</li>
+			<li><strong>CSS/SCSS</strong>: El archivo que contiene los estilos específicos de cada componente.</li>
+		</ul>
+		<p>Angular permite una gran flexibilidad y organización, con la ventaja de que los estilos de un componente solo afectan a ese componente en particular.</p>
+
+		<br><p><strong>3. Enrutamiento</strong></p>
+		<p>Angular maneja la navegación entre diferentes vistas (o componentes) a través del <strong>sistema de enrutamiento</strong>, lo que permite cambiar de componente sin recargar la página. Esto mejora el rendimiento y la experiencia del usuario.</p>
+		<p>Las rutas se configuran en el archivo <code>app-routing.module.ts</code>, y permiten asignar URLs específicas a cada componente de la aplicación.</p>
+
+		<br><p><strong>4. Referencia entre ficheros</strong></p>
+		<p>Angular organiza los ficheros y los componentes de forma modular. Los ficheros se referencian entre sí de las siguientes maneras:</p>
+		<ul>
+			<li><strong>Importación de componentes</strong>: Si un componente necesita usar otro, se importa en el archivo TypeScript correspondiente. Por ejemplo:</li>
+			<pre><code>import { ComponenteB } from '../componente-b/componente-b.component';</code></pre>
+			<p>Y luego se incluye en la plantilla HTML:</p>
+			<pre><code>&lt;app-componente-b&gt;&lt;/app-componente-b&gt;</code></pre>
+
+			<li><strong>Servicios</strong>: Los servicios se definen en archivos <code>.ts</code> y se inyectan en los componentes que los necesitan para compartir lógica o datos. Ejemplo de inyección de servicio:</li>
+			<pre><code>constructor(private miServicio: MiServicio) {}</code></pre>
+
+			<li><strong>Módulos</strong>: Los módulos agrupan componentes y servicios relacionados. Pueden ser importados en otros módulos. Ejemplo de declaración de un módulo:</li>
+			<pre><code>@NgModule({
+	  declarations: [ComponenteA, ComponenteB],
+	  imports: [CommonModule],
+	  exports: [ComponenteA, ComponenteB]
+	})
+	export class ModuloCompartido {}</code></pre>
+		</ul>
+
+		<br><p><strong>Resumiendo lo comentado...</strong></p>
+		<p>Angular organiza la aplicación en componentes modulares que gestionan su propia lógica y vista. Los ficheros HTML, TypeScript y CSS se modifican para cambiar la interfaz, la lógica o los estilos. Angular también utiliza el enrutamiento para manejar la navegación entre componentes sin recargar la página, y permite la referencia entre componentes, servicios y módulos para crear aplicaciones eficientes y escalables.</p>
         <img src="explicacion.jpg" alt="Componentes Angular" class="example-image">
     </main>
 
