@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Ejemplos de Código en Angular</h1>
-        <img src="angular-logo.png" alt="Angular Logo" class="angular-logo">
+        <img src="images/angular-logo.png" alt="Angular Logo" class="angular-logo">
     </header>
 
     <nav>
@@ -28,17 +28,39 @@
     </nav>
 
     <main>
-        <h2>Ejemplo de Componente Angular</h2>
+        <h2>Ejemplo de cómo crear un contador con botones para incrementar y decrementar el valor.</h2>
+		<br><p><strong>1. Componente TypeScript (<code>app.component.ts</code>):</strong></p>
         <pre><code>
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<h1>Hola Mundo en Angular</h1>',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  contador: number = 0;
+
+  incrementar() {
+    this.contador++;
+  }
+
+  decrementar() {
+    this.contador--;
+  }
+}
         </code></pre>
-        <p>Este es un ejemplo básico de un componente en Angular que muestra un mensaje "Hola Mundo".</p>
+		<br><p><strong>2. HTML del Componente (<code>app.component.html</code>):</strong></p>
+        <pre><code>
+Contador: {{ <code>valor_contador</code> }}
+
+<button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button>
+        </code></pre>
+		<br><p><strong>Explicación:</strong></p>
+        <p><li>TypeScript: Define un componente con una variable <code>contador</code> inicializada a 0, y dos métodos <code>incrementar()</code> y <code>decrementar()</code> para modificar su valor.</p>
+		<p><li>HTML: Muestra el valor del contador y tiene dos botones. Al hacer clic en los botones, se llaman a los métodos <code>incrementar()</code> y <code>decrementar()</code> para aumentar o disminuir el valor del contador.</p>
+		<br><p>Este ejemplo es muy sencillo y sirve como una introducción rápida a Angular para crear una funcionalidad básica. No visualizamos el valor de <code>CONTADOR</code>, ya que esto no deja de ser un simple tutorial.</p></br>
     </main>
 
     <footer>
