@@ -192,3 +192,19 @@ img {
     height: auto;                 /* Mantiene la proporción original de la imagen */
     border-radius: 5px;           /* Redondea las esquinas de las imágenes */
 }
+
+/* Estilo para bloques de código */
+pre {
+	background-color: #f4f4f4;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-family: "Courier New", Courier, monospace;
+	white-space: pre-wrap; /* Ajusta el texto largo */
+	word-wrap: break-word; /* Evita que el texto se salga de la caja */
+}
+
+code {
+	font-family: "Courier New", Courier, monospace;
+	color: #d14;
+}
